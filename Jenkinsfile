@@ -12,15 +12,17 @@ pipeline {
   
     stage("build") {
  
-      steps {
-        echo 'building the application...'
-        
-      }
       when {
         expression {
           params.executeBuild
         }
       }
+      
+      steps {
+        echo 'building the application...'
+        
+      }
+      
     }
     
     stage("test") {
