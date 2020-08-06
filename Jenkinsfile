@@ -17,11 +17,13 @@ pipeline {
     }
     
     stage("test") {
+
+      echo "testing version ${VERSION}"
       when {
         expression {
           BRANCH_NAME == 'dev' || BRANCH_NAME == 'master'
         }
-        echo "testing version ${VERSION}"
+        
         expression {
           params.executeTests
         }
