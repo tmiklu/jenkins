@@ -18,7 +18,6 @@ pipeline {
     
     stage("test") {
 
-      echo "testing version ${VERSION}"
       when {
         expression {
           BRANCH_NAME == 'dev' || BRANCH_NAME == 'master'
@@ -29,6 +28,7 @@ pipeline {
         }
       }
       steps {
+        echo "testing version ${VERSION}"
         echo 'testing the application...'
       }
     }
