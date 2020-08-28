@@ -1,3 +1,2 @@
 # jenkins  
-novy nadpis.
-dame dalsi riadok.
+novy nadpis a este nieco...
